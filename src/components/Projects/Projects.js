@@ -2,12 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import minai from "../../Assets/Projects/minai.png";
+import healthcare from "../../Assets/Projects/healthcare.png";
+import proto from "../../Assets/Projects/proto.png";
+import medicine from "../../Assets/Projects/medicine.png";
+import mlpcos from "../../Assets/Projects/mlpcos.png";
 
 function Projects() {
   return (
@@ -20,7 +19,7 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        {/* <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={chatify}
@@ -87,7 +86,64 @@ function Projects() {
               // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
             />
           </Col>
-        </Row>
+        </Row> */}
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+  <Col md={4} className="project-card">
+    <ProjectCard
+      imgPath={minai} // Replace with your actual image import
+      isBlog={false}
+      title="MinAI 2.0 - Chat with PDFs"
+      description="A smart AI web app to chat with multiple PDFs using Streamlit, LangChain, and Google Generative AI. Supports FAISS-based semantic search, chat history, dark mode, and more."
+      ghLink="https://github.com/bhargava-prashant/MinAI-2.0"
+      demoLink="https://minai-2-0.onrender.com/"
+    />
+  </Col>
+
+  <Col md={4} className="project-card">
+    <ProjectCard
+      imgPath={proto}
+      isBlog={false}
+      title="ProtoQuery Search Engine"
+      description="A high-performance search engine built with Go, MongoDB, and React. Supports MCQ and Anagram search types over 100,000+ entries with gRPC and real-time features."
+      ghLink="https://github.com/bhargava-prashant/ProtoQuery-Search-Engine"
+      demoLink="https://speakx-query-search-assignment.onrender.com/"
+    />
+  </Col>
+
+  <Col md={4} className="project-card">
+    <ProjectCard
+      imgPath={healthcare}
+      isBlog={false}
+      title="Niramaya - Healthcare Management System"
+      description="A full-fledged system for patients, doctors, and admins. Features include digital health cards, appointments, prescriptions with QR, reminders, chatbot, and Google Maps integration."
+      ghLink="https://github.com/bhargava-prashant/NIRAAMAYAA"
+      demoLink="" // Add if available
+    />
+  </Col>
+
+  <Col md={4} className="project-card">
+    <ProjectCard
+      imgPath={medicine}
+      isBlog={false}
+      title="Health Booking & Medicine Management System"
+      description="A Dockerized full-stack health platform with portals for admins, doctors, and patients. Includes CI/CD pipelines, QR-based prescriptions, appointment booking, and reminder integration."
+      ghLink="https://github.com/bhargava-prashant/Health-booking"
+      demoLink="" // Add live demo link if available
+    />
+  </Col>
+
+  <Col md={4} className="project-card">
+    <ProjectCard
+      imgPath={mlpcos}
+      isBlog={false}
+      title="PCOS Diagnosis using Machine Learning"
+      description="Co-authored book chapter on ML for PCOS prediction. Kaggle notebook with data analysis and model optimization. Published in 'Next Gen Computing Techniques for Biomedical Applications'."
+      ghLink="https://www.kaggle.com/code/bhargavaprashant/notebook2ee514e6ae"
+      demoLink="https://www.kaggle.com/code/bhargavaprashant/notebook2ee514e6ae" // Optional – add publication/book link if available
+    />
+  </Col>
+</Row>
+
       </Container>
     </Container>
   );
