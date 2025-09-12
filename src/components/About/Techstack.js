@@ -6,6 +6,9 @@ import { TbBrandGolang } from "react-icons/tb";
 import { SiDocker, SiMysql, SiExpress } from "react-icons/si";
 import { FaCode } from "react-icons/fa"; // For DSA (Generic Code Icon)
 import { FaServer } from "react-icons/fa"; // added FaServer for gRPC
+import { FaAws } from "react-icons/fa";
+import { SiPuppet } from "react-icons/si";
+
 
 
 function Techstack() {
@@ -29,12 +32,19 @@ function Techstack() {
       </Col>
 
       {/* DevOps & Tools */}
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit title="Git" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiDocker title="Docker" />
-      </Col>
+<Col xs={4} md={2} className="tech-icons">
+  <DiGit title="Git" />
+</Col>
+<Col xs={4} md={2} className="tech-icons">
+  <SiDocker title="Docker" />
+</Col>
+<Col xs={4} md={2} className="tech-icons">
+  <FaAws title="AWS" />
+</Col>
+<Col xs={4} md={2} className="tech-icons">
+  <SiPuppet title="Puppet" />
+</Col>
+
 
       {/* Databases */}
       <Col xs={4} md={2} className="tech-icons">
